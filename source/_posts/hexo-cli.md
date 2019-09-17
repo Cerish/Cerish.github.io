@@ -26,7 +26,7 @@ tags: hexo
     $ hexo s # 启动预览
 
 访问 `http://localhost:4000`，出现 Hexo 默认页面，本地博客安装成功！
-![hexoCli](/images/hexoCli.png)
+![hexoCli](/images/hexoCli/hexoCli.png)
 
 Tips: 如果出现页面加载不出来可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。
 

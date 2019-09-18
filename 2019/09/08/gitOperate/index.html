@@ -2,24 +2,24 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>test1 | Jay Lee个人博客</title>
-  <meta name="keywords" content=" test1 ">
-  <meta name="description" content="test1 | Jay Lee个人博客">
+  <title>git 的各种常用操作 | Jay Lee个人博客</title>
+  <meta name="keywords" content=" git ">
+  <meta name="description" content="git 的各种常用操作 | Jay Lee个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="前言作为前端小白的我，在之前项目中遇到问题，一直都是 百度–解决–完事。在一次偶然的机会接触到 Markdown，知道博客也是有Markdown 语法生成。再加上看到过有大佬的项目为 https:username/github.io/username。两者一结合，那我也生成一个自己的博客吧！虽然百度上有很多大佬写的教程，但是自己也做个记录，当做知识点记载吧。">
-<meta name="keywords" content="hexo">
+<meta name="description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
+<meta name="keywords" content="hexo git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用 hexo + github 搭建属于自己的个人网站">
-<meta property="og:url" content="http://yoursite.com/2019/09/08/hexo-cli/index.html">
+<meta property="og:title" content="多台电脑提交和更新github pages博客">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/hexoBranch/index.html">
 <meta property="og:site_name" content="Jay Lee个人博客">
-<meta property="og:description" content="前言作为前端小白的我，在之前项目中遇到问题，一直都是 百度–解决–完事。在一次偶然的机会接触到 Markdown，知道博客也是有Markdown 语法生成。再加上看到过有大佬的项目为 https:username/github.io/username。两者一结合，那我也生成一个自己的博客吧！虽然百度上有很多大佬写的教程，但是自己也做个记录，当做知识点记载吧。">
+<meta property="og:description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/hexoCli.png">
-<meta property="og:updated_time" content="2019-09-17T05:18:57.161Z">
+<meta property="og:image" content="http://yoursite.com/images/hexoBranch/masterBranch.png">
+<meta property="og:updated_time" content="2019-09-17T08:50:42.310Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用 hexo + github 搭建属于自己的个人网站">
-<meta name="twitter:description" content="前言作为前端小白的我，在之前项目中遇到问题，一直都是 百度–解决–完事。在一次偶然的机会接触到 Markdown，知道博客也是有Markdown 语法生成。再加上看到过有大佬的项目为 https:username/github.io/username。两者一结合，那我也生成一个自己的博客吧！虽然百度上有很多大佬写的教程，但是自己也做个记录，当做知识点记载吧。">
-<meta name="twitter:image" content="http://yoursite.com/images/hexoCli.png">
+<meta name="twitter:title" content="多台电脑提交和更新github pages博客">
+<meta name="twitter:description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
+<meta name="twitter:image" content="http://yoursite.com/images/hexoBranch/masterBranch.png">
 
 
 <link rel="icon" href="/img/badminton.png">
@@ -173,15 +173,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">hexo git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">test</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">test1</a>
     </li>
     
     <div class="clearfix"></div>
@@ -191,26 +191,26 @@
     <nav id="title-list-nav">
         
         <a  class=""
+           href="/2019/09/08/gitOperate/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 的各种常用操作">git 的各种常用操作</span>
+            <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/hexoBranch/"
+           data-tag="hexo git"
+           data-author="" >
+            <span class="post-title" title="多台电脑提交和更新github pages博客">多台电脑提交和更新github pages博客</span>
+            <span class="post-date" title="2019-09-09 17:26:11">2019/09/09</span>
+        </a>
+        
+        <a  class=""
            href="/2019/09/08/hexo-cli/"
            data-tag="hexo"
            data-author="" >
             <span class="post-title" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</span>
-            <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/09/08/test/"
-           data-tag="test"
-           data-author="" >
-            <span class="post-title" title="test">test</span>
-            <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/09/08/test1/"
-           data-tag="test1"
-           data-author="" >
-            <span class="post-title" title="test1">test1</span>
             <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
         </a>
         
@@ -226,9 +226,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-test1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-gitOperate" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">test1</h1>
+        <h1 class="article-title">git 的各种常用操作</h1>
     
     <div class="article-meta">
         
@@ -237,14 +237,14 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">test1</a>
+            <a href="javascript:" class="color4">git</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-17 13:18:57'>2019-09-08 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-19 00:32:21'>2019-09-08 17:26</time>
         
     </div>
     <div class="article-meta">
@@ -277,7 +277,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#测试1"><span class="toc-text">测试1</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git-查看版本操作"><span class="toc-text">git 查看版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-回退版本操作"><span class="toc-text">git 回退版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-恢复版本"><span class="toc-text">git 恢复版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-撤销修改"><span class="toc-text">git 撤销修改</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -292,7 +292,13 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h1><p>专门拿来测试的文章111111</p>
+        <p>接触了 GitHub 各种版本仓库，学会 git 的各种操作便显得尤为重要。首先自己上网查找 <a href="https://git-scm.com" target="_blank" rel="noopener">git</a> 的下载流程。当鼠标右键出现如下图箭头所示：<br><img src="/images/gitOperate/rightClick.png" alt><br>则代表已经安装成功！</p>
+<h1 id="git-查看版本操作"><a href="#git-查看版本操作" class="headerlink" title="git 查看版本操作"></a>git 查看版本操作</h1><p>在每一次进行 <code>commit</code> 操作后，Git 会保存每一次提交的记录。使用 <code>git log</code> 进行查看。（若信息太多，按 q 键退出）<br><img src="/images/gitOperate/gitLog.png" alt></p>
+<p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline 参数。<br><img src="/images/gitOperate/gitLogParameter.png" alt></p>
+<h1 id="git-回退版本操作"><a href="#git-回退版本操作" class="headerlink" title="git 回退版本操作"></a>git 回退版本操作</h1><p>使用 <code>git reset --hard HEAD^</code> 回退到上一个版本。上上一个版本就是 <code>HEAD^^</code>， n个版本为 <code>HEAD~n</code>。</p>
+<h1 id="git-恢复版本"><a href="#git-恢复版本" class="headerlink" title="git 恢复版本"></a>git 恢复版本</h1><p>使用 <code>git reflog</code>各个版本的 <code>commit id</code>，（下图开头的数字即为 id）<br><img src="/images/gitOperate/gitReflog.png" alt><br>然后使用 <code>git reset --hard id</code> ，回到指定的版本。</p>
+<h1 id="git-撤销修改"><a href="#git-撤销修改" class="headerlink" title="git 撤销修改"></a>git 撤销修改</h1><p>使用 <code>git checkout -- file</code> 可将工作区的文件修改全部撤销，撤销到暂存区（若有）一样的状态，否则撤销到版本库一样的状态。</p>
+<p>使用 <code>git reset HEAD file</code> 可将暂缓区的文件撤销，重新放回工作区。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
@@ -306,12 +312,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>test1</p>
+    <p><span class="copy-title">文章标题:</span>git 的各种常用操作</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-08, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-17, 13:18:57</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/08/test1/" title="test1">http://yoursite.com/2019/09/08/test1/</a>
+    <p><span class="copy-title">最后更新:</span>2019-09-19, 00:32:21</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/08/gitOperate/" title="git 的各种常用操作">http://yoursite.com/2019/09/08/gitOperate/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -415,7 +421,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#hexo','#test','#test1',],
+            'data': ['#git','#hexo git','#hexo',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

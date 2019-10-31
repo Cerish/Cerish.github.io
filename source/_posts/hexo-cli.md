@@ -2,6 +2,7 @@
 title: 利用 hexo + github 搭建属于自己的个人网站
 date: 2019-09-08 17:26:11
 tags: hexo
+top: 1
 ---
 
 # 前言
@@ -69,6 +70,12 @@ Tips: 如果出现页面加载不出来可能是端口被占用了。Ctrl+C 关�
     hexo s                # 本地预览
     hexo clean            # 清除缓存和已生成的静态文件
     hexo help             # 帮助
+
+### 4.3 hexo usage
+在长时间段不用 hexo 之后，可能会出现错误 `Usage: hexo < command >`，原因是hexo更新，导致本地服务不能用。执行如下语句就可以了。
+
+    npm install hexo-server --save
+
 
 ## 5. 更换 themes
 

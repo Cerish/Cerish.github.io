@@ -1,7 +1,9 @@
 ---
 title: 多台电脑提交和更新github pages博客
 date: 2019-09-09 17:26:11
-tags: hexo git
+tags:
+- hexo
+- git
 ---
 
 # 1. 前言

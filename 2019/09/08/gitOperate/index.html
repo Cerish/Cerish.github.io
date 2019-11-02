@@ -252,7 +252,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-19 16:11:47'>2019-09-08 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-02 15:20:31'>2019-09-08 17:26</time>
         
     </div>
     <div class="article-meta">
@@ -285,7 +285,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置-ssh-key"><span class="toc-text">设置 ssh key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-查看版本操作"><span class="toc-text">git 查看版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-回退版本操作"><span class="toc-text">git 回退版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-恢复版本"><span class="toc-text">git 恢复版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-撤销修改"><span class="toc-text">git 撤销修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-关联远程分支"><span class="toc-text">git 关联远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建与删除分支"><span class="toc-text">创建与删除分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储分支"><span class="toc-text">存储分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-cherry-pick"><span class="toc-text">git cherry-pick</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置-ssh-key"><span class="toc-text">设置 ssh key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-查看版本操作"><span class="toc-text">git 查看版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-回退版本操作"><span class="toc-text">git 回退版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-恢复版本"><span class="toc-text">git 恢复版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-撤销修改"><span class="toc-text">git 撤销修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-关联远程分支"><span class="toc-text">git 关联远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建与删除分支"><span class="toc-text">创建与删除分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储分支"><span class="toc-text">存储分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-cherry-pick"><span class="toc-text">git cherry-pick</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#远程仓库改名"><span class="toc-text">远程仓库改名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改本地分支名称"><span class="toc-text">修改本地分支名称</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -325,7 +325,14 @@ $ git checkout dev</code></pre><p>合并分支</p>
 <pre><code>$ git stash apply 恢复文件
 $ git stash drop 删除stash list列表的记录</code></pre><p>或者</p>
 <pre><code>$ git stash pop 恢复并删除stash list 列表记录</code></pre><p>也可通过 <code>$ git stash apply stash@{n}</code> 找回对应id的文件。</p>
-<h1 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h1><pre><code>`$ git cherry-pick commit-id` 可将该commit的消息拉取到该分支</code></pre>
+<h1 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h1><pre><code>`$ git cherry-pick commit-id` 可将该commit的消息拉取到该分支</code></pre><h1 id="远程仓库改名"><a href="#远程仓库改名" class="headerlink" title="远程仓库改名"></a>远程仓库改名</h1><p>这种情况适用于本地和远程的代码没得任何问题，就是远程仓库改了个名称，直接在本地修改远程仓库地址即可：</p>
+<pre><code>git remote set-url origin newAddress</code></pre><p>另外还可以先删除，然后添加地址：</p>
+<pre><code>git remote rm origin
+git remote add origin newAddress</code></pre><h1 id="修改本地分支名称"><a href="#修改本地分支名称" class="headerlink" title="修改本地分支名称"></a>修改本地分支名称</h1><pre><code>git branch -m oldBranchName newBranchName</code></pre><p>（修改分支名称总共分三步：</p>
+<p>一  git branch -m old_branch new_branch   修改本地分支</p>
+<p>二  git push origin :old_branch  删除远程分支</p>
+<p>三  git push –set-upstream origin new_branch 新增远程分支 ）</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
     </div>
@@ -342,7 +349,7 @@ $ git stash drop 删除stash list列表的记录</code></pre><p>或者</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-08, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-19, 16:11:47</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-02, 15:20:31</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/08/gitOperate/" title="git 的各种常用操作">http://yoursite.com/2019/09/08/gitOperate/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

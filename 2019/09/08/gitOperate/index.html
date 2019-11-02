@@ -7,7 +7,7 @@
   <meta name="description" content="git 的各种常用操作 | Jay Lee个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
-<meta name="keywords" content="hexo git">
+<meta name="keywords" content="git,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多台电脑提交和更新github pages博客">
 <meta property="og:url" content="http://yoursite.com/2019/09/09/hexoBranch/index.html">
@@ -15,7 +15,7 @@
 <meta property="og:description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/hexoBranch/masterBranch.png">
-<meta property="og:updated_time" content="2019-09-17T08:50:42.310Z">
+<meta property="og:updated_time" content="2019-11-02T07:02:40.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多台电脑提交和更新github pages博客">
 <meta name="twitter:description" content="1. 前言在上一篇文章 利用 hexo + github 搭建属于自己的个人网站 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。 2. 具体步骤2.1 准备工作首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示： 2.2 建立">
@@ -126,7 +126,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(3)</small></div></li>
+    <li><div class="all active">全部文章<small>(4)</small></div></li>
     
 </ul>
 <div class="left-bottom">
@@ -138,7 +138,7 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_posts_number" value="4">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -200,18 +200,26 @@
         
         <a  class=""
            href="/2019/09/09/hexoBranch/"
-           data-tag="hexo git"
+           data-tag="git,hexo"
            data-author="" >
             <span class="post-title" title="多台电脑提交和更新github pages博客">多台电脑提交和更新github pages博客</span>
             <span class="post-date" title="2019-09-09 17:26:11">2019/09/09</span>
         </a>
         
-        <a  class=""
+        <a id="top" class=""
            href="/2019/09/08/hexo-cli/"
            data-tag="hexo"
            data-author="" >
             <span class="post-title" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</span>
             <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/31/singleThread/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="js 单线程异步,宏任务，微任务">js 单线程异步,宏任务，微任务</span>
+            <span class="post-date" title="2019-10-31 14:56:11">2019/10/31</span>
         </a>
         
     </nav>
@@ -244,7 +252,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-19 00:32:21'>2019-09-08 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-19 16:11:47'>2019-09-08 17:26</time>
         
     </div>
     <div class="article-meta">
@@ -277,7 +285,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git-查看版本操作"><span class="toc-text">git 查看版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-回退版本操作"><span class="toc-text">git 回退版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-恢复版本"><span class="toc-text">git 恢复版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-撤销修改"><span class="toc-text">git 撤销修改</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设置-ssh-key"><span class="toc-text">设置 ssh key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-查看版本操作"><span class="toc-text">git 查看版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-回退版本操作"><span class="toc-text">git 回退版本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-恢复版本"><span class="toc-text">git 恢复版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-撤销修改"><span class="toc-text">git 撤销修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-关联远程分支"><span class="toc-text">git 关联远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建与删除分支"><span class="toc-text">创建与删除分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储分支"><span class="toc-text">存储分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-cherry-pick"><span class="toc-text">git cherry-pick</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -293,13 +301,31 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>接触了 GitHub 各种版本仓库，学会 git 的各种操作便显得尤为重要。首先自己上网查找 <a href="https://git-scm.com" target="_blank" rel="noopener">git</a> 的下载流程。当鼠标右键出现如下图箭头所示：<br><img src="/images/gitOperate/rightClick.png" alt><br>则代表已经安装成功！</p>
+<h1 id="设置-ssh-key"><a href="#设置-ssh-key" class="headerlink" title="设置 ssh key"></a>设置 ssh key</h1><p>现在很多情况下，都是使用 ssh链接 下拉项目，所以需要设置ssh key 让 github 识别这是你的账号。</p>
+<p>首先使用查看 <code>$ cd ~/.ssh</code> 查看用户主目录下是否有 .ssh 文件夹，如果有，查看有没有 <code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件。如果没有，则执行下面的语句生成ssh key。</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre><p>生成之后，复制 <code>id_rsa.pub</code> 文件的内容（公钥，windows下 执行 clip &lt; ~/.ssh/id_rsa.pub ，可将公钥复制至剪切板），然后登陆github 账号，进入 <code>setting --&gt; ssh key</code>，然后复制公钥。<br><img src="/images/gitOperate/sshKey.png" alt><br><img src="/images/gitOperate/setSSHkey.png" alt></p>
+<p>到这里已经设置好了ssh key，但是需要注意，如果 <code>.ssh</code>文件夹中没有 <code>known_hosts</code>文件的话， 在git push提交的时候可能会出现以下的问题</p>
+<pre><code>Are you sure you want to continue connecting (yes/no)? //输入yes，回车</code></pre><p>然后.ssh 文件夹下就会自动生成 known_hosts 文件了。</p>
 <h1 id="git-查看版本操作"><a href="#git-查看版本操作" class="headerlink" title="git 查看版本操作"></a>git 查看版本操作</h1><p>在每一次进行 <code>commit</code> 操作后，Git 会保存每一次提交的记录。使用 <code>git log</code> 进行查看。（若信息太多，按 q 键退出）<br><img src="/images/gitOperate/gitLog.png" alt></p>
 <p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline 参数。<br><img src="/images/gitOperate/gitLogParameter.png" alt></p>
 <h1 id="git-回退版本操作"><a href="#git-回退版本操作" class="headerlink" title="git 回退版本操作"></a>git 回退版本操作</h1><p>使用 <code>git reset --hard HEAD^</code> 回退到上一个版本。上上一个版本就是 <code>HEAD^^</code>， n个版本为 <code>HEAD~n</code>。</p>
 <h1 id="git-恢复版本"><a href="#git-恢复版本" class="headerlink" title="git 恢复版本"></a>git 恢复版本</h1><p>使用 <code>git reflog</code>各个版本的 <code>commit id</code>，（下图开头的数字即为 id）<br><img src="/images/gitOperate/gitReflog.png" alt><br>然后使用 <code>git reset --hard id</code> ，回到指定的版本。</p>
 <h1 id="git-撤销修改"><a href="#git-撤销修改" class="headerlink" title="git 撤销修改"></a>git 撤销修改</h1><p>使用 <code>git checkout -- file</code> 可将工作区的文件修改全部撤销，撤销到暂存区（若有）一样的状态，否则撤销到版本库一样的状态。</p>
 <p>使用 <code>git reset HEAD file</code> 可将暂缓区的文件撤销，重新放回工作区。</p>
-
+<h1 id="git-关联远程分支"><a href="#git-关联远程分支" class="headerlink" title="git 关联远程分支"></a>git 关联远程分支</h1><p> 选择你要连接的远程仓库，找到 Clone or download， 可直接复制项目地址</p>
+<pre><code>$ git remote add origin git@github.com:huajielee/gitHandle.git</code></pre><p>第一次推送至远程分支，<code>git push -u origin master</code> 加上 -u 参数</p>
+<h1 id="创建与删除分支"><a href="#创建与删除分支" class="headerlink" title="创建与删除分支"></a>创建与删除分支</h1><p>创建分支：</p>
+<pre><code>$ git checkout -b dev 创建并切换分支
+相当于
+$ git branch dev
+$ git checkout dev</code></pre><p>合并分支</p>
+<pre><code>$ git merge dev 将dev 的工作成功合并到当前分支</code></pre><p>删除分支</p>
+<pre><code>$ git branch -D dev</code></pre><h1 id="存储分支"><a href="#存储分支" class="headerlink" title="存储分支"></a>存储分支</h1><p>当在某个分支开发，做了修改还没commit的，需要切换到其他分支开发的时候，可以使用 <code>git stash</code> 将修改的文件进行暂时‘存储’，通过 <code>git stash list</code>查看存储列表。</p>
+<p>当返回该分支继续工作时，有以下两种方法：</p>
+<pre><code>$ git stash apply 恢复文件
+$ git stash drop 删除stash list列表的记录</code></pre><p>或者</p>
+<pre><code>$ git stash pop 恢复并删除stash list 列表记录</code></pre><p>也可通过 <code>$ git stash apply stash@{n}</code> 找回对应id的文件。</p>
+<h1 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h1><pre><code>`$ git cherry-pick commit-id` 可将该commit的消息拉取到该分支</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
     </div>
@@ -316,7 +342,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-08, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-19, 00:32:21</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-19, 16:11:47</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/08/gitOperate/" title="git 的各种常用操作">http://yoursite.com/2019/09/08/gitOperate/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

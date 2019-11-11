@@ -4,6 +4,7 @@ date: 2019-10-08 12:26:11
 tags: vue
 ---
 
+# vue.config.js 配置
 在vue 的 api 请求中，需要先解决跨域的问题，在vue-cli3中的解决办法，是在根目录下，建立一个 vue.config.js 文件，添加如下配置
 
     module.exports = {
@@ -23,6 +24,7 @@ tags: vue
         }
     }
 
+# axios 的拦截设置
 接下来，在vue 项目的请求中，一般是搭配 axios 配置进行api请求访问。进行如下设置，可对请求进行request拦截与 response 拦截。
 
     import axios from 'axios'; 引入 axios

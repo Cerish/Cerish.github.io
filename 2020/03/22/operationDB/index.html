@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>多台电脑提交和更新github pages博客 | Jay Lee个人博客</title>
-  <meta name="keywords" content=" git , hexo ">
-  <meta name="description" content="多台电脑提交和更新github pages博客 | Jay Lee个人博客">
+  <title>Jay Lee个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="Jay Lee个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
 <meta property="og:type" content="article">
@@ -351,27 +351,17 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexoBranch" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">多台电脑提交和更新github pages博客</h1>
+        <article id="post-operationDB" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color4">git</a>
-            
-            <a href="javascript:" class="color5">hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-02 15:02:40'>2019-09-09 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-24 23:43:48'>2020-03-22 23:55</time>
         
     </div>
     <div class="article-meta">
@@ -404,7 +394,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-具体步骤"><span class="toc-text">2. 具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-准备工作"><span class="toc-text">2.1 准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-建立-hexo-仓库"><span class="toc-text">2.2 建立 hexo 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><span class="toc-text">2.3 将本地博客的部署文件拷贝进username.github.io文件目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-新电脑操作"><span class="toc-text">2.4 新电脑操作</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-操作数据库"><span class="toc-text">1. 操作数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-操作数据库"><span class="toc-text">1.1 操作数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2数据库的列类型"><span class="toc-text">1.2数据库的列类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-数据库的字段属性（重点）"><span class="toc-text">1.3 数据库的字段属性（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-创建数据库表"><span class="toc-text">1.4 创建数据库表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-数据表的类型"><span class="toc-text">1.5 数据表的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-修改删除表"><span class="toc-text">2.6 修改删除表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-MYSQL-数据管理"><span class="toc-text">2.MYSQL 数据管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1外键"><span class="toc-text">2.1外键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2DML语言"><span class="toc-text">2.2DML语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-DQL语言"><span class="toc-text">2.3 DQL语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-常用函数"><span class="toc-text">2.4 常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-聚合函数"><span class="toc-text">2.5 聚合函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-事务"><span class="toc-text">3 事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-索引"><span class="toc-text">4. 索引</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-索引的分类"><span class="toc-text">4.1 索引的分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-用户管理"><span class="toc-text">5  用户管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-数据备份"><span class="toc-text">6 数据备份</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-数据库设计"><span class="toc-text">7 数据库设计</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -419,20 +409,290 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>在上一篇文章 <a href="/2019/09/08/hexo-cli/" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</a> 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。</p>
-<h1 id="2-具体步骤"><a href="#2-具体步骤" class="headerlink" title="2. 具体步骤"></a>2. 具体步骤</h1><h2 id="2-1-准备工作"><a href="#2-1-准备工作" class="headerlink" title="2.1 准备工作"></a>2.1 准备工作</h2><p>首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：<br><img src="/images/hexoBranch/masterBranch.png" alt></p>
-<h2 id="2-2-建立-hexo-仓库"><a href="#2-2-建立-hexo-仓库" class="headerlink" title="2.2 建立 hexo 仓库"></a>2.2 建立 hexo 仓库</h2><p>在 Github 的 <code>username.github.io</code> 仓库上基于 master 建立一个 hexo 分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为 hexo，并将该仓库克隆到本地。</p>
-<h2 id="2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="2.3 将本地博客的部署文件拷贝进username.github.io文件目录"></a>2.3 将本地博客的部署文件拷贝进username.github.io文件目录</h2><p>如题，可删除克隆下来的仓库文件，将本地博客的部署文件拷贝进username.github.io文件目录中去。接下来，将该目录下的文件提交到 hexo 分支，但要注意：</p>
-<pre><code>· 将themes目录以内中的主题的.git目录删除（如果有），因为一个git仓库中不能包含另一个git仓库，提交主题文件夹会失败。
-· 移除 .git方法：
-    1. 删除隐藏文件 git
-    2.git rm --cache themes/name 从暂存区删除该文件夹
-    3. 三步走: --&gt;git add .  --&gt;git commit -m &quot;commit message&quot; --&gt;git push
-· 删除了themes目录中的.git就不能git pull更新主题，如果需要更新主题，则在另一个地方git clone下来该主题的最新版本，然后将内容拷到当前主题目录即可</code></pre><p>完成以上操作，hexo分支的文件就可以随时随地修改了。</p>
-<h2 id="2-4-新电脑操作"><a href="#2-4-新电脑操作" class="headerlink" title="2.4 新电脑操作"></a>2.4 新电脑操作</h2><p>至此，你的博客已经可以在其他电脑上进行同步的维护和更新了，方法很简单：</p>
-<pre><code>· 将新电脑的生成的ssh key添加到GitHub账户上
-· 在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支
-· 切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)</code></pre><p>至此，所以的工作已经完成就绪，其余的只需按照博客的发布与GitHub 拉取操作一直即可。</p>
+        <h1 id="1-操作数据库"><a href="#1-操作数据库" class="headerlink" title="1. 操作数据库"></a>1. 操作数据库</h1><h2 id="1-1-操作数据库"><a href="#1-1-操作数据库" class="headerlink" title="1.1 操作数据库"></a>1.1 操作数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建数据库</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> [<span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span>] my_project</span><br><span class="line"><span class="comment">-- 删除数据库</span></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> [<span class="keyword">if</span> <span class="keyword">exists</span>] my_project</span><br><span class="line"><span class="comment">-- 使用数据库</span></span><br><span class="line"><span class="keyword">use</span> my_project</span><br><span class="line"><span class="comment">-- 查看所有数据库</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">database</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2数据库的列类型"><a href="#1-2数据库的列类型" class="headerlink" title="1.2数据库的列类型"></a>1.2数据库的列类型</h2><blockquote>
+<p>数值</p>
+</blockquote>
+<ul>
+<li>tinyint                 十分小的数据                1个字节</li>
+<li>smallint              较小的数据                     2个字节</li>
+<li>mediumint         中等大小的数据             3个数据</li>
+<li>*<em>int                        标准的数据                    4个字节        常用 *</em></li>
+<li>bigint                    较大的数据                    8个字节</li>
+<li>float                       浮点数                           8个字节</li>
+<li>double                  浮点数                            8个字节</li>
+<li>decimal                 字符串的浮点数            精确数据时使用</li>
+</ul>
+<blockquote>
+<p>字符串</p>
+</blockquote>
+<ul>
+<li>char                     字符串固定大小           0 - 255</li>
+<li>*<em>varchar                可变字符串                   0 - 65535  常用的 *</em></li>
+<li>tinytext                  微型文本                        2^8 - 1</li>
+<li><strong>text                         文本串                            2^16 - 1</strong>    保存大文本</li>
+</ul>
+<blockquote>
+<p>时间日期</p>
+</blockquote>
+<p>java.util.Date</p>
+<ul>
+<li>date                YYYY - MM - DD   日期格式</li>
+<li>time                HH : mm : ss         时间格式</li>
+<li><strong>datetime       YYYY - MM - DD   HH : mm : ss    最常用的时间格式</strong></li>
+<li>timestamp    时间戳      1970.1.1到现在的毫秒数</li>
+</ul>
+<blockquote>
+<p>null</p>
+</blockquote>
+<ul>
+<li>没有值 ， 未知</li>
+<li>==注意， 不要用null进行运算， 结果为null==</li>
+</ul>
+<h2 id="1-3-数据库的字段属性（重点）"><a href="#1-3-数据库的字段属性（重点）" class="headerlink" title="1.3 数据库的字段属性（重点）"></a>1.3 数据库的字段属性（重点）</h2><p>==Unsigned== </p>
+<ul>
+<li>无符号的整数</li>
+<li>声明了该列不能为负数</li>
+</ul>
+<p>==zerofill==</p>
+<ul>
+<li>0 填充的</li>
+<li>不足的位数 使用 0 填充 int(3)  ,  5 –&gt; 005</li>
+</ul>
+<h2 id="1-4-创建数据库表"><a href="#1-4-创建数据库表" class="headerlink" title="1.4 创建数据库表"></a>1.4 创建数据库表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `student` (</span><br><span class="line">  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT &apos;学号&apos;,</span><br><span class="line">  `name` varchar(30) NOT NULL DEFAULT &apos;匿名&apos; COMMENT &apos;姓名&apos;,</span><br><span class="line">  `pwd` varchar(20) NOT NULL DEFAULT &apos;123&apos; COMMENT &apos;密码&apos;,</span><br><span class="line">  `sex` varchar(20) NOT NULL DEFAULT &apos;女&apos; COMMENT &apos;性别&apos;,</span><br><span class="line">  `birthday` datetime DEFAULT NULL COMMENT &apos;家庭地址&apos;,</span><br><span class="line">  `email` varchar(50) DEFAULT NULL COMMENT &apos;邮箱&apos;,</span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8; </span><br><span class="line"></span><br><span class="line">-- 常用命令</span><br><span class="line">show create DATABASE school;  -- 查看创建数据库的语句</span><br><span class="line">show CREATE TABLE student;    -- 查看创建表的语句</span><br><span class="line">desc student; -- 查看表的结构</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-数据表的类型"><a href="#1-5-数据表的类型" class="headerlink" title="1.5 数据表的类型"></a>1.5 数据表的类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">INNODB 默认使用</span><br><span class="line">MYISAM 早些年使用</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>INNODB</th>
+<th>MYISAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>事务</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>数据行锁定</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>外键约束</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>全文索引</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>表空间的大小</td>
+<td>较大， 约为2倍</td>
+<td>较小</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>常规使用操作</p>
+</blockquote>
+<ul>
+<li>MYISAM  节约空间， 速度较快</li>
+<li>INNODB  安全性高，事务的处理，多表多用户操作</li>
+</ul>
+<blockquote>
+<p>在物理空间的位置</p>
+</blockquote>
+<ul>
+<li>MYISAM  节约空间， 速度较快<ul>
+<li>*.frm  表结构的定义文件</li>
+<li>*.MYD 数据文件</li>
+<li>*.MYI 索引文件（index）</li>
+</ul>
+</li>
+<li>INNODB  <ul>
+<li>*.frm  表结构的定义文件</li>
+<li>*.IBD 数据文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-6-修改删除表"><a href="#2-6-修改删除表" class="headerlink" title="2.6 修改删除表"></a>2.6 修改删除表</h2><blockquote>
+<p>修改表</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">alter table teacher rename as teacher1    -- 修改表名</span><br><span class="line">alter table teacher add age int(11)       --  添加字段</span><br><span class="line"></span><br><span class="line">-- 修改表的字段(重命名 修改约束)</span><br><span class="line">alter table teacher modify age varchar(11)  -- 修改约束</span><br><span class="line">alter table teacher change oldField newField int(11)  -- 字段重命名</span><br><span class="line">-- 删除表的字段</span><br><span class="line">alter table teacher drop age</span><br></pre></td></tr></table></figure>
+
+<p>==所有的创建和删除尽量加上判断， 以免出错==</p>
+<h1 id="2-MYSQL-数据管理"><a href="#2-MYSQL-数据管理" class="headerlink" title="2.MYSQL 数据管理"></a>2.MYSQL 数据管理</h1><h2 id="2-1外键"><a href="#2-1外键" class="headerlink" title="2.1外键"></a>2.1外键</h2><blockquote>
+<p>方式一</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">key `FK_gradeId` (`gradeId`),</span><br><span class="line">constraint `FK_gradeId` foreign key (`gradeId`) references `grade`(gradeId)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>方式二</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table `student`</span><br><span class="line">add constraint `FK_gradeId` foreign key(`gradeId`) references `grade`(`gradeId`)</span><br></pre></td></tr></table></figure>
+
+<p>删除有外键关系的表的时候，必须先删除引用别人字段的表（从表），在删除被引用的表（主表）。</p>
+<p>以上是物理级别的外键，数据库级别的外键，不建议使用</p>
+<p>==最佳实践==：  程序逻辑实现数据之间的关联</p>
+<h2 id="2-2DML语言"><a href="#2-2DML语言" class="headerlink" title="2.2DML语言"></a>2.2DML语言</h2><p>DML语言： 数据操作</p>
+<ul>
+<li><p>insert       </p>
+<ul>
+<li>insert  into  表名  （字段1，…） values (字段1， …)    ==一一对应==</li>
+<li>insert into 表名   values (字段1， 字段2， ….)   ==前面字段不写默认按表的排序，缺一不可==</li>
+</ul>
+</li>
+<li><p>update</p>
+<ul>
+<li>update 表名  set  字段1 = value [where id = 1]   ==不写更改所有数据==</li>
+</ul>
+</li>
+<li><p>delete</p>
+<ul>
+<li>delete from 表名  [where id = 1]        ==不写删除整个表的数据，不破坏表结构==</li>
+<li>truncate 表名         ==删除整个表的数据，不破坏表结构==</li>
+<li>truncate 与delete 差别在自增==归置默认==，事务。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-DQL语言"><a href="#2-3-DQL语言" class="headerlink" title="2.3 DQL语言"></a>2.3 DQL语言</h2><blockquote>
+<p>模糊查询</p>
+</blockquote>
+<ul>
+<li><p>is null</p>
+</li>
+<li><p>is not null</p>
+</li>
+<li><p>between  [闭合区间]</p>
+</li>
+<li><p><strong>like</strong>    where name like ‘李%’</p>
+<ul>
+<li>% 有任意的字符</li>
+<li>_ 匹配只有一个字符的</li>
+</ul>
+</li>
+<li><p><strong>in</strong>      where id in (1,2,3)</p>
+<ul>
+<li>具体的值， 一个或多个</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>join 语言</p>
+</blockquote>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200323114253742.png" alt="image-20200323114253742"></p>
+<blockquote>
+<p>排序和分页</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 排序</span><br><span class="line">order by 字段 ASC(升序 默认) DESC(降序)</span><br><span class="line">-- 分页</span><br><span class="line">order by 字段 ASC(升序 默认)</span><br><span class="line">limit (n - 1) * pageSize, pageSize</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-常用函数"><a href="#2-4-常用函数" class="headerlink" title="2.4 常用函数"></a>2.4 常用函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">-- 数值类</span><br><span class="line">  select ABS(-10)     -- 绝对值</span><br><span class="line">  select CEILING(9.4) -- 向上取整</span><br><span class="line">  select FLOOR(9.4)   -- 向下取整</span><br><span class="line">  select RAND    -- 0 - 1 随机数</span><br><span class="line">  select SIGN(0)    -- 返回数的符号(-1, 0, 1)</span><br><span class="line">-- 字符串</span><br><span class="line">  select char_length     -- 字符串的长度</span><br><span class="line">  select concat(&apos;&apos;, &apos;&apos;, &apos;&apos;)  -- 拼接字符串</span><br><span class="line">  select insert(&apos;str&apos;, startIndex, len, &apos;replaceStr&apos;) -- 插入替换</span><br><span class="line">  select LOWER(str) -- 转换小写</span><br><span class="line">  select UPPER(str) -- 转换大写</span><br><span class="line">  select instr(str, char) -- 第一次出现字符的位置</span><br><span class="line">  select replace(str, 要替换的字符串, 替换的字符串)</span><br><span class="line">  select substr(str, startIndex, len) -- 截取字符串</span><br><span class="line">-- 时间和日期</span><br><span class="line">  select current_date()  -- 当前日期</span><br><span class="line">  select curdate()  -- 当前日期</span><br><span class="line">  select now()/localtimesysdate   -- 当前时间/本地时间/系统时间</span><br><span class="line">  </span><br><span class="line">-- 获取系统用户</span><br><span class="line">  select system_user()/user -- 当前用户</span><br><span class="line">  select version()  -- 版本</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-5-聚合函数"><a href="#2-5-聚合函数" class="headerlink" title="2.5 聚合函数"></a>2.5 聚合函数</h2><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>count(字段/*/1)</strong></td>
+<td>计数(字段会忽略null值)</td>
+</tr>
+<tr>
+<td>sum()</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>avg()</td>
+<td>平均值</td>
+</tr>
+<tr>
+<td>max()</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>min()</td>
+<td>最小值</td>
+</tr>
+</tbody></table>
+<h1 id="3-事务"><a href="#3-事务" class="headerlink" title="3 事务"></a>3 事务</h1><blockquote>
+<p>事务原则（事务提交不可逆）</p>
+</blockquote>
+<p>==ACID原则==</p>
+<ul>
+<li><p>原子性        要么都成功，要么都失败。</p>
+</li>
+<li><p>一致性        结果一致性(过程一致性)</p>
+</li>
+<li><p>隔离性        多个事务互不干扰</p>
+<blockquote>
+<p>隔离带来的问题</p>
+</blockquote>
+<ul>
+<li>脏读:  一个事务读取到另外一个事务未提交的数据。</li>
+<li>不可重复读  :  在一个事务内读取某一行数据，多次读取结果不同。</li>
+<li>幻读(虚读) :   是指在一个事务内读到了别的事务插入的数据，导致前后读取不一致。</li>
+</ul>
+</li>
+<li><p>持久性</p>
+<ul>
+<li>事务没提交， 恢复到原有状态</li>
+<li>事务提交，持久化到数据库</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-索引"><a href="#4-索引" class="headerlink" title="4. 索引"></a>4. 索引</h1><p><strong>索引(index) 是帮助MYSQL高效获取数据的数据结构</strong></p>
+<h2 id="4-1-索引的分类"><a href="#4-1-索引的分类" class="headerlink" title="4.1 索引的分类"></a>4.1 索引的分类</h2><ul>
+<li>主键索引    primary key<ul>
+<li>唯一的标识，主键不可重复,只能有一个列作为主键</li>
+</ul>
+</li>
+<li>唯一索引    unique key<ul>
+<li>避免重复的列出现 </li>
+</ul>
+</li>
+<li>普通索引    key/index</li>
+<li>全文索引    Fulltext</li>
+</ul>
+<h1 id="5-用户管理"><a href="#5-用户管理" class="headerlink" title="5  用户管理"></a>5  用户管理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-- 创建用户</span><br><span class="line">create user name identified by &apos;123456&apos;;</span><br><span class="line">-- 更改密码</span><br><span class="line">ser password [for cerish] = passsword(&apos;123456&apos;);</span><br><span class="line">-- 重命名</span><br><span class="line">rename user oldName to newName;</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-数据备份"><a href="#6-数据备份" class="headerlink" title="6 数据备份"></a>6 数据备份</h1><p>数据备份的方式</p>
+<ul>
+<li>从物理文件复制</li>
+<li>使用可视化工具进行备份</li>
+<li>命令行模式   ==mysqldump==<ul>
+<li>==导出：==     mysqldump -h主机 -u用户名 -p密码 数据库 表1 [表2 表3] &gt;D:\a.sql</li>
+<li>==导入：==      登录状态下， source D:\a.sql</li>
+<li>不登录状态下， mysql -u 用户名 -p密码  库名&lt; 备份文件</li>
+</ul>
+</li>
+</ul>
+<h1 id="7-数据库设计"><a href="#7-数据库设计" class="headerlink" title="7 数据库设计"></a>7 数据库设计</h1><blockquote>
+<p>三大范式</p>
+</blockquote>
+<ul>
+<li>第一范式(1 NF)<ul>
+<li>原子性： 数据表的每一列不可再分。</li>
+</ul>
+</li>
+<li>第二范式(2 NF)<ul>
+<li>前提： 满足第一范式</li>
+<li>每张表只描述一件事情</li>
+</ul>
+</li>
+<li>第三范式(3 NF)<ul>
+<li>前提： 满足第一范式和第二范式</li>
+<li>确保数据表中的每一列数据和主键直接相关， 而不能间接相关。</li>
+</ul>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
@@ -446,12 +706,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>多台电脑提交和更新github pages博客</p>
+    <p><span class="copy-title">文章标题:</span></p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-09, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-02, 15:02:40</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/09/hexoBranch/" title="多台电脑提交和更新github pages博客">http://yoursite.com/2019/09/09/hexoBranch/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-22, 23:55:18</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-24, 23:43:48</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/22/operationDB/" title="">http://yoursite.com/2020/03/22/operationDB/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

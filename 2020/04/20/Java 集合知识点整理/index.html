@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>多台电脑提交和更新github pages博客 | Jay Lee个人博客</title>
-  <meta name="keywords" content=" git , hexo ">
-  <meta name="description" content="多台电脑提交和更新github pages博客 | Jay Lee个人博客">
+  <title>Jay Lee个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="Jay Lee个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
 <meta property="og:type" content="article">
@@ -351,27 +351,17 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexoBranch" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">多台电脑提交和更新github pages博客</h1>
+        <article id="post-Java 集合知识点整理" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color4">git</a>
-            
-            <a href="javascript:" class="color5">hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-02 15:02:40'>2019-09-09 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2020-04-20 23:15:57'>2020-04-20 23:15</time>
         
     </div>
     <div class="article-meta">
@@ -404,7 +394,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-具体步骤"><span class="toc-text">2. 具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-准备工作"><span class="toc-text">2.1 准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-建立-hexo-仓库"><span class="toc-text">2.2 建立 hexo 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><span class="toc-text">2.3 将本地博客的部署文件拷贝进username.github.io文件目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-新电脑操作"><span class="toc-text">2.4 新电脑操作</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-集合知识点整理"><span class="toc-text">Java 集合知识点整理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Collection-接口"><span class="toc-text">1. Collection 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-List-接口"><span class="toc-text">1.1 List 接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Map-接口"><span class="toc-text">2. Map 接口</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -419,21 +409,11 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>在上一篇文章 <a href="/2019/09/08/hexo-cli/" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</a> 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。</p>
-<h1 id="2-具体步骤"><a href="#2-具体步骤" class="headerlink" title="2. 具体步骤"></a>2. 具体步骤</h1><h2 id="2-1-准备工作"><a href="#2-1-准备工作" class="headerlink" title="2.1 准备工作"></a>2.1 准备工作</h2><p>首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：<br><img src="/images/hexoBranch/masterBranch.png" alt></p>
-<h2 id="2-2-建立-hexo-仓库"><a href="#2-2-建立-hexo-仓库" class="headerlink" title="2.2 建立 hexo 仓库"></a>2.2 建立 hexo 仓库</h2><p>在 Github 的 <code>username.github.io</code> 仓库上基于 master 建立一个 hexo 分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为 hexo，并将该仓库克隆到本地。</p>
-<h2 id="2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="2.3 将本地博客的部署文件拷贝进username.github.io文件目录"></a>2.3 将本地博客的部署文件拷贝进username.github.io文件目录</h2><p>如题，可删除克隆下来的仓库文件，将本地博客的部署文件拷贝进username.github.io文件目录中去。接下来，将该目录下的文件提交到 hexo 分支，但要注意：</p>
-<pre><code>· 将themes目录以内中的主题的.git目录删除（如果有），因为一个git仓库中不能包含另一个git仓库，提交主题文件夹会失败。
-· 移除 .git方法：
-    1. 删除隐藏文件 git
-    2.git rm --cache themes/name 从暂存区删除该文件夹
-    3. 三步走: --&gt;git add .  --&gt;git commit -m &quot;commit message&quot; --&gt;git push
-· 删除了themes目录中的.git就不能git pull更新主题，如果需要更新主题，则在另一个地方git clone下来该主题的最新版本，然后将内容拷到当前主题目录即可</code></pre><p>完成以上操作，hexo分支的文件就可以随时随地修改了。</p>
-<h2 id="2-4-新电脑操作"><a href="#2-4-新电脑操作" class="headerlink" title="2.4 新电脑操作"></a>2.4 新电脑操作</h2><p>至此，你的博客已经可以在其他电脑上进行同步的维护和更新了，方法很简单：</p>
-<pre><code>· 将新电脑的生成的ssh key添加到GitHub账户上
-· 在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支
-· 切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)</code></pre><p>至此，所以的工作已经完成就绪，其余的只需按照博客的发布与GitHub 拉取操作一直即可。</p>
-
+        <h1 id="Java-集合知识点整理"><a href="#Java-集合知识点整理" class="headerlink" title="Java 集合知识点整理"></a>Java 集合知识点整理</h1><blockquote>
+<p><strong>Java</strong> 的集合类主要由三个接口派生而出，即 <strong>Collection</strong>、<strong>Map</strong>、 <strong>Iterator</strong>。</p>
+</blockquote>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200420215842436.png" alt="image-20200420215842436"></p>
+<h2 id="1-Collection-接口"><a href="#1-Collection-接口" class="headerlink" title="1. Collection 接口"></a>1. Collection 接口</h2><h3 id="1-1-List-接口"><a href="#1-1-List-接口" class="headerlink" title="1.1 List 接口"></a>1.1 List 接口</h3><h2 id="2-Map-接口"><a href="#2-Map-接口" class="headerlink" title="2. Map 接口"></a>2. Map 接口</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
     </div>
@@ -446,12 +426,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>多台电脑提交和更新github pages博客</p>
+    <p><span class="copy-title">文章标题:</span></p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-09, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-02, 15:02:40</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/09/hexoBranch/" title="多台电脑提交和更新github pages博客">http://yoursite.com/2019/09/09/hexoBranch/</a>
+    <p><span class="copy-title">发布时间:</span>2020-04-20, 23:15:56</p>
+    <p><span class="copy-title">最后更新:</span>2020-04-20, 23:15:57</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/04/20/Java 集合知识点整理/" title="">http://yoursite.com/2020/04/20/Java 集合知识点整理/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

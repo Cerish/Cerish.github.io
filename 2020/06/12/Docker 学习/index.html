@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>Jay Lee个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="Jay Lee个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jay Lee个人博客">
+<meta property="og:url" content="http://yoursite.com/2020/07/03/环境变量配置/index.html">
+<meta property="og:site_name" content="Jay Lee个人博客">
+<meta property="og:description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-07-05T08:28:27.558Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jay Lee个人博客">
+<meta name="twitter:description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
+
+
+<link rel="icon" href="/img/badminton.png">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/dog.jpg" />
+</a>
+<div class="author">
+    <span>Jay Lee</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/huajielee" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:huajielee8888@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=731523780&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="19">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class=""
+           href="/2019/09/08/hexo-cli/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</span>
+            <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/07/03/环境变量配置/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-07-03 10:54:58">2020/07/03</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/06/12/Docker 学习/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-06-12 12:57:30">2020/06/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/06/09/工作常用的工具类合集/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-06-09 11:19:42">2020/06/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/06/01/面试整理/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-06-01 20:15:27">2020/06/01</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/04/24/各种排序比较/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-04-24 00:57:25">2020/04/24</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/04/20/Java 集合知识点整理/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-04-20 23:15:56">2020/04/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/04/06/Java 23种设计模式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-04-06 23:56:59">2020/04/06</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/04/01/注解与反射/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-04-01 21:27:10">2020/04/01</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/03/27/swagger/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-03-27 00:44:29">2020/03/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/03/22/operationDB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-03-22 23:55:18">2020/03/22</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/03/22/linux-basic/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-03-22 21:59:37">2020/03/22</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/03/22/xshell-connect/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-03-22 16:08:35">2020/03/22</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/03/21/accountPwd/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2020-03-21 22:16:59">2020/03/21</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/31/singleThread/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="js 单线程异步,宏任务，微任务">js 单线程异步,宏任务，微任务</span>
+            <span class="post-date" title="2019-10-31 14:56:11">2019/10/31</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/gitSlow/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git clone 速度慢解决">git clone 速度慢解决</span>
+            <span class="post-date" title="2019-10-08 12:26:11">2019/10/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/08/axios/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="记录 vue 的 axios 拦截配置">记录 vue 的 axios 拦截配置</span>
+            <span class="post-date" title="2019-10-08 12:26:11">2019/10/08</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/09/hexoBranch/"
+           data-tag="git,hexo"
+           data-author="" >
+            <span class="post-title" title="多台电脑提交和更新github pages博客">多台电脑提交和更新github pages博客</span>
+            <span class="post-date" title="2019-09-09 17:26:11">2019/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/08/gitOperate/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git 的各种常用操作">git 的各种常用操作</span>
+            <span class="post-date" title="2019-09-08 17:26:11">2019/09/08</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Docker 学习" class="article article-type-post" itemscope itemprop="blogPost">
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-06-29 16:47:35'>2020-06-12 12:57</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker-学习"><span class="toc-text">Docker 学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装-docker"><span class="toc-text">1 安装 docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-docker-的常用命令"><span class="toc-text">2. docker 的常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-部署-es-kibana"><span class="toc-text">3. 部署 es + kibana</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-可视化-portainer"><span class="toc-text">4. 可视化 portainer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-commit-镜像"><span class="toc-text">5. commit 镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-容器数据卷"><span class="toc-text">6. 容器数据卷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-DockerFile"><span class="toc-text">7. DockerFile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Docker-网络"><span class="toc-text">8.Docker 网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Docker-部署-springboot-项目"><span class="toc-text">9. Docker 部署 springboot 项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-CI（持续集成）-Jenkins-Gitlab-Docker"><span class="toc-text">10. CI（持续集成） Jenkins+Gitlab+Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置ssh服务器"><span class="toc-text">配置ssh服务器</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker-学习"><a href="#Docker-学习" class="headerlink" title="Docker 学习"></a>Docker 学习</h1><h2 id="1-安装-docker"><a href="#1-安装-docker" class="headerlink" title="1 安装 docker"></a>1 安装 docker</h2><p>官方文档地址：<a href="https://docs.docker.com/" target="_blank" rel="noopener">https://docs.docker.com/</a></p>
+<blockquote>
+<p>安装</p>
+</blockquote>
+<p>Install on ubuntu</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 卸载旧版本</span><br><span class="line"><span class="meta">$</span> sudo apt-get remove docker docker-engine docker.io containerd runc</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br><span class="line"><span class="meta">$</span> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -   </span><br><span class="line"><span class="meta">$</span> sudo apt-key fingerprint 0EBFCD88</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> sudo add-apt-repository \</span><br><span class="line">   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span><br><span class="line"><span class="meta">   $</span>(lsb_release -cs) \</span><br><span class="line">   stable"  # 默认国外地址</span><br><span class="line"><span class="meta">$</span> sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 查看版本是否安装成功</span><br><span class="line"><span class="meta">$</span> docker version</span><br><span class="line">Client: Docker Engine - Community</span><br><span class="line"> Version:           19.03.11</span><br><span class="line"> API version:       1.40</span><br><span class="line"> Go version:        go1.13.10</span><br><span class="line"> Git commit:        42e35e61f3</span><br><span class="line"> Built:             Mon Jun  1 09:12:22 2020</span><br><span class="line"> OS/Arch:           linux/amd64</span><br><span class="line"> Experimental:      false</span><br><span class="line"></span><br><span class="line">Server: Docker Engine - Community</span><br><span class="line"> Engine:</span><br><span class="line">  Version:          19.03.11</span><br><span class="line">  API version:      1.40 (minimum version 1.12)</span><br><span class="line">  Go version:       go1.13.10</span><br><span class="line">  Git commit:       42e35e61f3</span><br><span class="line">  Built:            Mon Jun  1 09:10:54 2020</span><br><span class="line">  OS/Arch:          linux/amd64</span><br><span class="line">  Experimental:     false</span><br><span class="line"> containerd:</span><br><span class="line">  Version:          1.2.13</span><br><span class="line">  GitCommit:        7ad184331fa3e55e52b890ea95e65ba581ae3429</span><br><span class="line"> runc:</span><br><span class="line">  Version:          1.0.0-rc10</span><br><span class="line">  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd</span><br><span class="line"> docker-init:</span><br><span class="line">  Version:          0.18.0</span><br><span class="line">  GitCommit:        fec3683</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>sudo docker run hello-world</p>
+</blockquote>
+<p>==看到箭头指的这句话，就表示安装成功了==</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612134508414.png" alt="image-20200612134508414"></p>
+<blockquote>
+<p>docker images</p>
+</blockquote>
+<p>==查看当前下载的镜像==</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612134634355.png" alt="image-20200612134634355"></p>
+<blockquote>
+<p>卸载docker</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 1. 卸载依赖 2.删除目录</span><br><span class="line"><span class="meta">$</span> sudo apt-get purge docker-ce docker-ce-cli containerd.io</span><br><span class="line"><span class="meta">$</span> sudo rm -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>阿里云镜像加速</p>
+</blockquote>
+<ul>
+<li>登录阿里云， 找到容器镜像服务  –&gt; 镜像加速器</li>
+<li>按照四个步骤，配置docker</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'</span><br><span class="line">&#123;</span><br><span class="line">  "registry-mirrors": ["https://azkfr77x.mirror.aliyuncs.com"]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-docker-的常用命令"><a href="#2-docker-的常用命令" class="headerlink" title="2. docker 的常用命令"></a>2. docker 的常用命令</h2><blockquote>
+<p>帮助命令</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker version # docker 版本信息</span><br><span class="line">donker info    # docker 系统信息</span><br><span class="line">docker --help  # docker 所有命令</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>文档地址  <a href="https://docs.docker.com/reference/" target="_blank" rel="noopener">https://docs.docker.com/reference/</a></p>
+</blockquote>
+<blockquote>
+<p>镜像命令</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images # 查看本机上的所有镜像</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612142746581.png" alt="image-20200612142746581"></p>
+<blockquote>
+<p> ==docker search 搜索镜像==</p>
+</blockquote>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612143056327.png" alt="image-20200612143056327"></p>
+<blockquote>
+<p>docker pull 下载镜像 </p>
+</blockquote>
+<ul>
+<li>不写版本 直接下载最新的</li>
+<li>==docker pull mysql 等价于 docker.io/library/mysql:latest==</li>
+</ul>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612143603808.png" alt="image-20200612143603808"></p>
+<blockquote>
+<p>docker rmi 删除镜像</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> docker rmi -f 镜像id [镜像id]  删除指定的容器</span><br><span class="line"><span class="meta">#</span> docker rmi -f $(docker images -aq) 删除全部的容器 $相当于传参数</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>容器命令</p>
+</blockquote>
+<p>==有了镜像，才有容器，下载一个镜像来学习==</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull unubtu</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>新建容器病并启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run [可选参数] image</span><br><span class="line"><span class="meta">#</span> 参数说明</span><br><span class="line">--name="Name" 容器名字 Tomcat1 Tomcat2</span><br><span class="line">-d        后台方式运行</span><br><span class="line">-it      使用交互方式运行</span><br><span class="line">-P       指定容器的端口 -p  8080:8080</span><br><span class="line">-p       随机指定端口</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动并进入容器</span><br><span class="line">docker run -it centos /bin/bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 退出容器 exit</span><br><span class="line">exit</span><br><span class="line"><span class="meta">#</span> 退出容器但不停止</span><br><span class="line">ctrl+p+q</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>查看运行的容器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker ps   # 当前运行的容器</span><br><span class="line">docker ps -a # 所有容器(包括以前运行过的)</span><br><span class="line">docker ps -n=? # 最近运行的容器</span><br><span class="line">docker ps -aq # 所有容器(包括以前运行过的)的编号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>删除容器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker rm 容器id # 运行的容器不能这样删除</span><br><span class="line">docker rm -f $(docker ps -aq) # 删除所有的容器</span><br><span class="line">docker ps -a -q|xargs docker rm # 删除所有的容器</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动和停止容器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker start 容器id   # 开启容器</span><br><span class="line">docker restart 容器id   # 重启容器</span><br><span class="line">docker stop 容器id      # 停止容器</span><br><span class="line">docker kill 容器id       # 强制停止容器</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>常用的其他命令</p>
+</blockquote>
+<ul>
+<li>后台启动</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -d centos</span><br><span class="line"><span class="meta">#</span> 容器启动之后，没有前台应用，就会自己停止进程</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看日志</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f -t --tail num 容器id   #固定条数</span><br><span class="line">docker logs -tf --tail num 容器id     # 显示全部</span><br><span class="line"><span class="meta">#</span> 自制脚本， 不然可能没有日志</span><br><span class="line">docker run -d centos /bin/bash -c "while true;do echo jack;sleep 1;done"</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看容器进程信息</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker top 容器id</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612153320768.png" alt="image-20200612153320768"></p>
+<ul>
+<li>进入当前正在运行的容器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 方式一 开启一个新的终端，可以在里面操作(常用)</span><br><span class="line">docker exec -it 容器id bashShell</span><br><span class="line"><span class="meta">#</span> 方式二 进入正在执行的终端，不会开启新的终端</span><br><span class="line">docker attach 容器id</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从容器中把文件拷贝到主机</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">root@hwsrv-641744:~# clear</span><br><span class="line">root@hwsrv-641744:~# docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">mysql               latest              be0dbf01a0f3        3 days ago          541MB</span><br><span class="line">ubuntu              latest              1d622ef86b13        7 weeks ago         73.9MB</span><br><span class="line">centos              latest              470671670cac        4 months ago        237MB</span><br><span class="line">hello-world         latest              bf756fb1ae65        5 months ago        13.3kB</span><br><span class="line">root@hwsrv-641744:~# docker run -it centos /bin/bash</span><br><span class="line">[root@242809b1022d /]# ls</span><br><span class="line">bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var</span><br><span class="line">[root@242809b1022d /]# cd /home</span><br><span class="line">[root@242809b1022d home]# ls</span><br><span class="line">[root@242809b1022d home]# touch test.java</span><br><span class="line">[root@242809b1022d home]# ls</span><br><span class="line">test.java</span><br><span class="line">[root@242809b1022d home]# exit</span><br><span class="line">exit</span><br><span class="line">root@hwsrv-641744:~# docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">root@hwsrv-641744:~# docker ps -s</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES               SIZE</span><br><span class="line">root@hwsrv-641744:~# docker ps -a</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES</span><br><span class="line">242809b1022d        centos              "/bin/bash"         59 seconds ago      Exited (0) 18 seconds ago                       eager_franklin</span><br><span class="line">root@hwsrv-641744:~# docker cp 242809b1022d:/home/test.java /home</span><br><span class="line">root@hwsrv-641744:~# cd /home</span><br><span class="line">root@hwsrv-641744:/home# ls</span><br><span class="line">test.java</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-部署-es-kibana"><a href="#3-部署-es-kibana" class="headerlink" title="3. 部署 es + kibana"></a>3. 部署 es + kibana</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> es 太耗内存 1.xG</span><br><span class="line">docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.6.2</span><br><span class="line"><span class="meta">#</span> 修改配置文件</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>docker stats  查看Cpu</p>
+</blockquote>
+<h2 id="4-可视化-portainer"><a href="#4-可视化-portainer" class="headerlink" title="4. 可视化 portainer"></a>4. 可视化 portainer</h2><p>Docker 图形化界面管理工具！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 下载运行</span><br><span class="line">docker run -d -p 8088:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /home/docker/portainer:/data --name portainer --restart=always portainer/portainer</span><br></pre></td></tr></table></figure>
+
+<p>==平时不会用，玩玩即可==</p>
+<h2 id="5-commit-镜像"><a href="#5-commit-镜像" class="headerlink" title="5. commit 镜像"></a>5. commit 镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit 提交容器成为副本</span><br><span class="line">docker commit -m="要提交的消息" -a="作者" 容器id 目标镜像名:[TAG]</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-容器数据卷"><a href="#6-容器数据卷" class="headerlink" title="6. 容器数据卷"></a>6. 容器数据卷</h2><h2 id="7-DockerFile"><a href="#7-DockerFile" class="headerlink" title="7. DockerFile"></a>7. DockerFile</h2><h2 id="8-Docker-网络"><a href="#8-Docker-网络" class="headerlink" title="8.Docker 网络"></a>8.Docker 网络</h2><h2 id="9-Docker-部署-springboot-项目"><a href="#9-Docker-部署-springboot-项目" class="headerlink" title="9. Docker 部署 springboot 项目"></a>9. Docker 部署 springboot 项目</h2><blockquote>
+<p>Docker 安装 MySQL</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装 mysql</span><br><span class="line">docker pull mysql:5.7</span><br><span class="line"><span class="meta">#</span> 运行 MySQL</span><br><span class="line">docker run -p 3306:3306 -d --name mymysql -v /docker/mysql/data:/usr/share/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Docker 安装 redis</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装 redis</span><br><span class="line">docker pull redis:3.2</span><br><span class="line"><span class="meta">#</span> 运行 redis </span><br><span class="line">docker run -p 6379:6379 -d --name myredis -v /docker/redis/data:/data redis:3.2 redis-server --appendonly yes</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安装 JDK 8</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull java:8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>idea maven 打包 jar 包</p>
+</blockquote>
+<ul>
+<li>idea –&gt; maven –&gt; Lifecycle –&gt; package</li>
+<li>建立 Docker file 文件，这是docker 部署的必要文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM java:8</span><br><span class="line"></span><br><span class="line">COPY *.jar /app.jar</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line"></span><br><span class="line">ENTRYPOINT ["java","-jar","/app.jar"]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>生成镜像</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 必须在 Dockerfile 目录下执行 不要忘记 . 不然报错 "docker build" requires exactly 1 argument.</span><br><span class="line">docker build -t name[:tag] .</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行容器</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8090:8090 --name tiro tiro[:tag]</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-CI（持续集成）-Jenkins-Gitlab-Docker"><a href="#10-CI（持续集成）-Jenkins-Gitlab-Docker" class="headerlink" title="10. CI（持续集成） Jenkins+Gitlab+Docker"></a>10. CI（持续集成） Jenkins+Gitlab+Docker</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> pull jenkins</span><br><span class="line">docker pull jenkins/jenkins</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 运行 并挂载容器卷 -v 宿主机 目录 ：容器 目录</span><br><span class="line"><span class="meta">#</span> -Xmx 指定大顶堆内存  -m 设置应用允许使用的最大内存</span><br><span class="line"><span class="meta">$</span> docker run -d -u 0 -p 8888:8080 -p 50000:50000 --name jenkins -v /usr/local/maven/apache-maven-3.6.3:/usr/local/maven/apache-maven-3.6.3 -v /usr/lib/jvm/java-1.8.0-openjdk-amd64:/usr/lib/jvm/java-1.8.0-openjdk-amd64 -v /usr/lib/jvm/java-8-openjdk-amd64:/usr/lib/jvm/java-8-openjdk-amd64   -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:latest</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 打开 ip:8888， 输入/var/jenkins_home/secrets/initialAdminPassword 的密码 ---&gt; 选择默认推荐的安装插件 --&gt; 配置管理员账号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="配置ssh服务器"><a href="#配置ssh服务器" class="headerlink" title="配置ssh服务器"></a>配置ssh服务器</h3></blockquote>
+<ul>
+<li><p>首页 -&gt; 点击系统管理 -&gt; 管理插件 -&gt;可选插件 -&gt; 过滤：ssh -&gt; 选择Publish Over SSH插件，点击直接安装</p>
+</li>
+<li><p>jenkins首页，系统管理 -&gt; 系统设置 -&gt; 下拉，找到Publish over SSH 点击新增</p>
+<ul>
+<li>Name为服务器名称</li>
+<li>Hostname填写服务器ip</li>
+<li>userName填写用户名</li>
+<li>RemoteDirectory指工作目录,比如填写/tmp 发送过去的所有文件默认在/tmp下</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>创建任务</p>
+</blockquote>
+<p>输入任务名称 –&gt; 选择构建一个maven项目 (如果没有这个选项， 那就需要下载插件==Maven Integration plugin==)</p>
+<ul>
+<li><p>在general中选择丢弃旧的构建以节省磁盘资源</p>
+</li>
+<li><p>源码管理配置 git账户名和密码</p>
+</li>
+<li><p>构建触发器 </p>
+<ul>
+<li>Build whenever a SNAPSHOT dependency is built</li>
+<li>GitHub hook trigger for GITScm polling</li>
+</ul>
+</li>
+<li><p>构建环境</p>
+</li>
+<li><p>Add timestamps to the Console Output</p>
+</li>
+<li><p>Build</p>
+<ul>
+<li>pom.xml</li>
+<li>clean install package -Dmaven.test.skip=true  -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true</li>
+</ul>
+</li>
+<li><p><strong>Post Steps</strong></p>
+</li>
+<li><p>Run only if build succeeds</p>
+</li>
+<li><p><strong>构建后操作</strong></p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200629005842518.png" alt="image-20200629005842518"></p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin</span><br><span class="line"><span class="meta">#</span> DockerFile和jar包所在的文件夹</span><br><span class="line">DOCKER_FILE_BASE_PATH=/var/jenkins_home/workspace/tiro</span><br><span class="line"><span class="meta">#</span> cd 到工作目录下</span><br><span class="line">cd $DOCKER_FILE_BASE_PATH</span><br><span class="line"><span class="meta">#</span> 修改jar包名称统一改为app.jar</span><br><span class="line">mv $DOCKER_FILE_BASE_PATH/*.jar $DOCKER_FILE_BASE_PATH/app.jar</span><br><span class="line"><span class="meta">#</span> 应用名称,也为容器名称</span><br><span class="line">APPLICATION_NAME=tiro</span><br><span class="line"><span class="meta">#</span> 镜像名称</span><br><span class="line">IMAGE_NAME=$APPLICATION_NAME:latest</span><br><span class="line"><span class="meta">#</span> 停止并删除旧的容器</span><br><span class="line">set -e; docker stop $APPLICATION_NAME &amp;&amp; docker rm $APPLICATION_NAME || EXIT_CODE=$? &amp;&amp; true;</span><br><span class="line"><span class="meta">#</span>删除旧的镜像</span><br><span class="line">set -e; docker rmi $IMAGE_NAME || EXIT_CODE=$? &amp;&amp; true;</span><br><span class="line"><span class="meta">#</span>构建镜像</span><br><span class="line">docker build -t $IMAGE_NAME -f $DOCKER_FILE_BASE_PATH/Dockerfile .</span><br><span class="line"><span class="meta">#</span>运行容器</span><br><span class="line">docker run --name $APPLICATION_NAME -e "SPRING_PROFILES_ACTIVE=test"   -d -p 8090:8090   $IMAGE_NAME</span><br></pre></td></tr></table></figure>
+
+<p>==由于服务器内存不足，打包不成功，待换服务器再进行测试==</p>
+<blockquote>
+<p>搭建时遇到的问题</p>
+</blockquote>
+<ul>
+<li>新建流程时，需要在jenkins中先配置maven， jdk1.8, git </li>
+</ul>
+<blockquote>
+<p>Ubuntu 安装 maven</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 下载 maven 包</span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"><span class="meta">#</span> 解压</span><br><span class="line">tar zxvf apache-maven-3.6.3-bin.tar.gz</span><br><span class="line"><span class="meta">#</span> 推荐放在 /usr/local/maven 下</span><br><span class="line">mkdir /usr/local/maven</span><br><span class="line">sudo mv apache-maven-3.6.1 /usr/local/maven/</span><br><span class="line"><span class="meta">#</span> 这一步的目的是让系统可以通过 PATH 找到 maven 的可执行文件</span><br><span class="line">echo "MAVEN_HOME=/usr/local/maven/apache-maven-3.6.3" &gt;&gt; ~/.bashrc</span><br><span class="line">echo "PATH=\$&#123;PATH&#125;:\$&#123;MAVEN_HOME&#125;/bin" &gt;&gt; ~/.bashrc</span><br><span class="line">echo "export PATH" &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line"><span class="meta">#</span> 执行mvn -v之后，得到其版本号，证明安装成功。</span><br><span class="line">mvn -v</span><br><span class="line">Maven home: /usr/local/maven/apache-maven-3.6.3</span><br><span class="line">Java version: 1.8.0_252, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre</span><br><span class="line">Default locale: en, platform encoding: UTF-8</span><br><span class="line">OS name: "linux", version: "4.15.0-101-generic", arch: "amd64", family: "unix"</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ubuntu 安装git </p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 下载git</span><br><span class="line"><span class="meta">$</span> apt install git</span><br><span class="line"><span class="meta">$</span> git version</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ubuntu 安装 jdk </p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo apt-get install openjdk-8-jdk</span><br><span class="line"><span class="meta">$</span> java -version</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>shell 脚本</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line">echo "开始执行shell脚本"</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 在jenkins环境中一定要加这句话，否则这个脚本进程最后会被杀死</span><br><span class="line">export BUILD_ID=dontKillMe</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 指定最后编译好的jar的存放位置</span><br><span class="line">JAR_PATH=/var/jenkins_home/workspace/tiro/</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 如果路径不存在，就创建路径</span><br><span class="line">[ ! -e $JAR_PATH ] &amp;&amp; mkdir -p $JAR_PATH</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 指定jenkins中存放编译好的jar的位置</span><br><span class="line">JENKINS_JAR_PATH=/var/jenkins_home/workspace/tiro/target</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 如果路径不存在，就创建路径</span><br><span class="line">[ ! -e $JENKINS_JAR_PATH ] &amp;&amp; mkdir -p $JENKINS_JAR_PATH</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 指定jenkins中存放编译好的jar的名称(这个jar的名字和pom文件配置有关)</span><br><span class="line">JENKINS_JAR_NAME=tiro-0.0.1-SNAPSHOT.jar</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 获取该项目的进程号，用于重新部署项目前杀死进程</span><br><span class="line">process_id=$(ps -ef | grep ydqc | awk '&#123;print $2&#125;')</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 如果该项目正在运行，就杀死项目进程</span><br><span class="line">echo $process_id</span><br><span class="line">if [[ ! -z "$process_id" ]]</span><br><span class="line">then </span><br><span class="line">	echo "停止正在进行服务"</span><br><span class="line">    kill -9 $process_id</span><br><span class="line">    echo "开始启动服务"</span><br><span class="line">else </span><br><span class="line">	echo "服务未启动"</span><br><span class="line">fi</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 进入Jenkins中编译好的jar的位置</span><br><span class="line">cd $&#123;JENKINS_JAR_PATH&#125;</span><br><span class="line">echo "复制之前"</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 将Jenkins中编译好的jar复制到最终存放项目jar的位置</span><br><span class="line">cp $JENKINS_JAR_PATH/$JENKINS_JAR_NAME $JAR_PATH</span><br><span class="line"></span><br><span class="line">echo "复制之后"</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 进入到存放项目jar的位置</span><br><span class="line">cd $&#123;JAR_PATH&#125;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span> 后台启动项目，并且将控制台日志输出到nohup.out中</span><br><span class="line"> </span><br><span class="line">nohup java -jar $&#123;JENKINS_JAR_NAME&#125; &gt;ydqc.log &amp;</span><br><span class="line"> </span><br><span class="line">echo "shell脚本执行完毕"</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>github 设置 webhook</p>
+</blockquote>
+<ul>
+<li><p>在项目中的setting –&gt; Webhooks ,Add webhook , /github-webhook一定要加，不然会报错</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200629003854743.png" alt="image-20200629003854743"></p>
+</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
+    </div>
+</article>
+
+<!-- 
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span></p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-06-12, 12:57:30</p>
+    <p><span class="copy-title">最后更新:</span>2020-06-29, 16:47:35</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/06/12/Docker 学习/" title="">http://yoursite.com/2020/06/12/Docker 学习/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '337f50bc507c36eaaeed',
+            clientSecret: '4a667d5acab46ab38aca36932469a8f6104826c7',
+            repo: 'huajielee.github.io',
+            owner: 'huajielee',
+            admin: ['huajielee'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+ -->
+
+        
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '337f50bc507c36eaaeed',
+            clientSecret: '4a667d5acab46ab38aca36932469a8f6104826c7',
+            repo: 'huajielee.github.io',
+            owner: 'huajielee',
+            admin: ['huajielee'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+    </div>
+    <div class="copyright">
+        <!-- <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p> -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#vue','#git','#hexo',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

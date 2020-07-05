@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>多台电脑提交和更新github pages博客 | Jay Lee个人博客</title>
-  <meta name="keywords" content=" git , hexo ">
-  <meta name="description" content="多台电脑提交和更新github pages博客 | Jay Lee个人博客">
+  <title>Jay Lee个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="Jay Lee个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1. 软件环境变量配置1.1 配置Java环境变量 右键 计算机 –&amp;gt; 属性 –&amp;gt; 高级系统设置 –&amp;gt; 环境变量 新建系统变量 –&amp;gt; Java_Home  值为你下载的Java 路径  eg: G:\huajieli\jdk 编辑 Path变量：%Java_Home%\bin;%Java_Home%\jre\bin; 注意变量之间的分号 新建CLASSPATH变量， 值为">
 <meta property="og:type" content="article">
@@ -351,27 +351,17 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexoBranch" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">多台电脑提交和更新github pages博客</h1>
+        <article id="post-swagger" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color4">git</a>
-            
-            <a href="javascript:" class="color5">hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-11-02 15:02:40'>2019-09-09 17:26</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-27 21:50:10'>2020-03-27 00:44</time>
         
     </div>
     <div class="article-meta">
@@ -404,7 +394,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-具体步骤"><span class="toc-text">2. 具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-准备工作"><span class="toc-text">2.1 准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-建立-hexo-仓库"><span class="toc-text">2.2 建立 hexo 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><span class="toc-text">2.3 将本地博客的部署文件拷贝进username.github.io文件目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-新电脑操作"><span class="toc-text">2.4 新电脑操作</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-boot-集成-swagger"><span class="toc-text">spring boot 集成 swagger</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-导入依赖"><span class="toc-text">1. 导入依赖</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-集成swagger"><span class="toc-text">2. 集成swagger</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-测试"><span class="toc-text">3. 测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-swagger-配置"><span class="toc-text">4. swagger 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-配置扫描接口"><span class="toc-text">4.2 配置扫描接口</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -419,21 +409,17 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>在上一篇文章 <a href="/2019/09/08/hexo-cli/" title="利用 hexo + github 搭建属于自己的个人网站">利用 hexo + github 搭建属于自己的个人网站</a> 已经提到如何创建与更新博客。虽然hexo部署blog到github确实很方便，但不能满足不同时间、不同地点、不同电脑上更新文章的需求。跟随下面几个步骤，可以让你随心所欲写文章。</p>
-<h1 id="2-具体步骤"><a href="#2-具体步骤" class="headerlink" title="2. 具体步骤"></a>2. 具体步骤</h1><h2 id="2-1-准备工作"><a href="#2-1-准备工作" class="headerlink" title="2.1 准备工作"></a>2.1 准备工作</h2><p>首先确保自己已经使用hexo在github搭建好了自己的个人博客，github仓库中如下图显示：<br><img src="/images/hexoBranch/masterBranch.png" alt></p>
-<h2 id="2-2-建立-hexo-仓库"><a href="#2-2-建立-hexo-仓库" class="headerlink" title="2.2 建立 hexo 仓库"></a>2.2 建立 hexo 仓库</h2><p>在 Github 的 <code>username.github.io</code> 仓库上基于 master 建立一个 hexo 分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为 hexo，并将该仓库克隆到本地。</p>
-<h2 id="2-3-将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#2-3-将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="2.3 将本地博客的部署文件拷贝进username.github.io文件目录"></a>2.3 将本地博客的部署文件拷贝进username.github.io文件目录</h2><p>如题，可删除克隆下来的仓库文件，将本地博客的部署文件拷贝进username.github.io文件目录中去。接下来，将该目录下的文件提交到 hexo 分支，但要注意：</p>
-<pre><code>· 将themes目录以内中的主题的.git目录删除（如果有），因为一个git仓库中不能包含另一个git仓库，提交主题文件夹会失败。
-· 移除 .git方法：
-    1. 删除隐藏文件 git
-    2.git rm --cache themes/name 从暂存区删除该文件夹
-    3. 三步走: --&gt;git add .  --&gt;git commit -m &quot;commit message&quot; --&gt;git push
-· 删除了themes目录中的.git就不能git pull更新主题，如果需要更新主题，则在另一个地方git clone下来该主题的最新版本，然后将内容拷到当前主题目录即可</code></pre><p>完成以上操作，hexo分支的文件就可以随时随地修改了。</p>
-<h2 id="2-4-新电脑操作"><a href="#2-4-新电脑操作" class="headerlink" title="2.4 新电脑操作"></a>2.4 新电脑操作</h2><p>至此，你的博客已经可以在其他电脑上进行同步的维护和更新了，方法很简单：</p>
-<pre><code>· 将新电脑的生成的ssh key添加到GitHub账户上
-· 在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支
-· 切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)</code></pre><p>至此，所以的工作已经完成就绪，其余的只需按照博客的发布与GitHub 拉取操作一直即可。</p>
+        <h1 id="spring-boot-集成-swagger"><a href="#spring-boot-集成-swagger" class="headerlink" title="spring boot 集成 swagger"></a>spring boot 集成 swagger</h1><h1 id="1-导入依赖"><a href="#1-导入依赖" class="headerlink" title="1. 导入依赖"></a>1. 导入依赖</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.9.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.9.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
+<h1 id="2-集成swagger"><a href="#2-集成swagger" class="headerlink" title="2. 集成swagger"></a>2. 集成swagger</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置 config </span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableSwagger</span>2</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwaggerConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果使用了spring-security, 则需要放开权限, 否则会出现 404 弹框</span></span><br><span class="line">.antMatchers(<span class="string">"/v2/api-docs"</span>, <span class="string">"/configuration/ui"</span>,</span><br><span class="line">             <span class="string">"/swagger-resources/**"</span>, <span class="string">"/configuration/security"</span>,</span><br><span class="line">             <span class="string">"/images/**"</span>,</span><br><span class="line">             <span class="string">"/swagger-ui.html"</span>, <span class="string">"/webjars/**"</span>,</span><br><span class="line">             <span class="string">"/swagger-resources/configuration/ui"</span>,</span><br><span class="line">             <span class="string">"/swagge‌​r-ui.html"</span>).permitAll()</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200326235932865.png" alt="image-20200326235932865"></p>
+<h1 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h1><p>输入localhost:8090/swagger-ui.html, 即可看到你的api文档页面（这时候是空文档）</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200327000426945.png" alt="image-20200327000426945"></p>
+<h1 id="4-swagger-配置"><a href="#4-swagger-配置" class="headerlink" title="4. swagger 配置"></a>4. swagger 配置</h1><p>##4.1 配置个人信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置了 swagger 的bean实例</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Docket <span class="title">docket</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .apiInfo(apiInfo());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ApiInfo <span class="title">apiInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Contact contact = <span class="keyword">new</span> Contact(<span class="string">"cerish"</span>, <span class="string">"https://www.baidu.com"</span>, <span class="string">"731523780@qq.com"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ApiInfo(</span><br><span class="line">                <span class="string">"cerish 的swagger api文档"</span>,</span><br><span class="line">                <span class="string">"我就是想要使用swagger"</span>,</span><br><span class="line">                <span class="string">"v1.0"</span>,</span><br><span class="line">                <span class="string">"urn:tos"</span>,</span><br><span class="line">                contact,</span><br><span class="line">                <span class="string">"Apache 2.0"</span>,</span><br><span class="line">                <span class="string">"http://www.apache.org/licenses/LICENSE-2.0"</span>,</span><br><span class="line">                <span class="keyword">new</span> ArrayList()</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2-配置扫描接口"><a href="#4-2-配置扫描接口" class="headerlink" title="4.2 配置扫描接口"></a>4.2 配置扫描接口</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 huajielee8888@qq.com </span>
     </div>
@@ -446,12 +432,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>多台电脑提交和更新github pages博客</p>
+    <p><span class="copy-title">文章标题:</span></p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Jay Lee">Jay Lee</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-09, 17:26:11</p>
-    <p><span class="copy-title">最后更新:</span>2019-11-02, 15:02:40</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/09/hexoBranch/" title="多台电脑提交和更新github pages博客">http://yoursite.com/2019/09/09/hexoBranch/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-27, 00:44:29</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-27, 21:50:10</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/27/swagger/" title="">http://yoursite.com/2020/03/27/swagger/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

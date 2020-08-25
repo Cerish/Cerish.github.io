@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="常见vue问题1. vue router1.1 懒加载问题1234567// 以下方式可进行懒加载// 1. 直接在 component 引入component: resolve =&amp;gt; require([./Foo], resolve)// 2. webpack ensure引入, 很少使用const Demo = r =&amp;gt; require.ensure([], () =&amp;gt; r(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jay Lee个人博客">
+<meta property="og:url" content="http://yoursite.com/2020/07/20/vue/index.html">
+<meta property="og:site_name" content="Jay Lee个人博客">
+<meta property="og:description" content="常见vue问题1. vue router1.1 懒加载问题1234567// 以下方式可进行懒加载// 1. 直接在 component 引入component: resolve =&amp;gt; require([./Foo], resolve)// 2. webpack ensure引入, 很少使用const Demo = r =&amp;gt; require.ensure([], () =&amp;gt; r(">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-08-15T17:47:31.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jay Lee个人博客">
+<meta name="twitter:description" content="常见vue问题1. vue router1.1 懒加载问题1234567// 以下方式可进行懒加载// 1. 直接在 component 引入component: resolve =&amp;gt; require([./Foo], resolve)// 2. webpack ensure引入, 很少使用const Demo = r =&amp;gt; require.ensure([], () =&amp;gt; r(">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/20/vue/">
+
+
+
+
+
+  <title> | Jay Lee个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jay Lee个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/20/vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jay Lee">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jay Lee个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-20T12:29:37+08:00">
+                2020-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="常见vue问题"><a href="#常见vue问题" class="headerlink" title="常见vue问题"></a>常见vue问题</h1><h2 id="1-vue-router"><a href="#1-vue-router" class="headerlink" title="1. vue router"></a>1. vue router</h2><h3 id="1-1-懒加载问题"><a href="#1-1-懒加载问题" class="headerlink" title="1.1 懒加载问题"></a>1.1 懒加载问题</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下方式可进行懒加载</span></span><br><span class="line"><span class="comment">// 1. 直接在 component 引入</span></span><br><span class="line">component: <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([./Foo], resolve)</span><br><span class="line"><span class="comment">// 2. webpack ensure引入, 很少使用</span></span><br><span class="line"><span class="keyword">const</span> Demo = <span class="function"><span class="params">r</span> =&gt;</span> <span class="built_in">require</span>.ensure([], () =&gt; r(<span class="built_in">require</span>(<span class="string">'../views/Demo'</span>)), <span class="string">'Demo'</span>)</span><br><span class="line"><span class="comment">// 3. es6 变量方式引入 (组件按组分块)</span></span><br><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/*webpackChunkName:'Home'*/</span> <span class="string">'./Foo'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-动态路由加载"><a href="#1-2-动态路由加载" class="headerlink" title="1.2 动态路由加载"></a>1.2 动态路由加载</h3><ul>
+<li><p>利用 <code>router.addRoutes</code> 可进行路由的动态加载。</p>
+</li>
+<li><p>==注意点==如下</p>
+<ul>
+<li><p>不要在全局路由（静态）中定义 <code>{path: &#39;*&#39;, redirect: &#39;/404&#39;}</code>，否则在加载动态路由之前，会直接跳转到 <code>&#39;/404&#39;</code>页面</p>
+</li>
+<li><p>由于浏览器刷新页面的行为会初始化 router 、vuex等数据，所以需要在 <code>router.beforeEach</code>中进行动态路由的加载</p>
+</li>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据不同的需求进行逻辑切换</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(to.meta) &#123;</span><br><span class="line">        <span class="built_in">document</span>.title = to.meta.title;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(store.getters.addRouters.length)</span><br><span class="line">    <span class="keyword">if</span>(!store.getters.addRouters.length) &#123;</span><br><span class="line">        store.dispatch(<span class="string">'GenerateRouterByRoleType'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            router.addRoutes(store.getters.addRouters);</span><br><span class="line">            next(&#123; ...to, <span class="attr">replace</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// store.dispatch('SET_ROUTERS');</span></span><br><span class="line">        <span class="comment">// router.addRoutes(store.getters.addRouters);</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(localStorage.getItem(<span class="string">"token"</span>)) &#123;</span><br><span class="line">        next();</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 白名单不需要认证</span></span><br><span class="line">        <span class="keyword">if</span> (whiteList.indexOf(to.path) &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            next();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            router.replace(<span class="string">'/login'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-vuex"><a href="#2-vuex" class="headerlink" title="2. vuex"></a>2. vuex</h2><ul>
+<li>常规的vuex 使用包含以下四种，<code>state、 getter、actions、mutations</code></li>
+</ul>
+<h3 id="2-1-state"><a href="#2-1-state" class="headerlink" title="2.1 state"></a>2.1 state</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// state 一般用于存储属性，作为数据源的存在</span></span><br><span class="line"><span class="comment">// 组件中获取数据的方式</span></span><br><span class="line"><span class="comment">// 1. 直接通过实例获取</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="keyword">this</span>.$store.state.XXX;</span><br><span class="line"><span class="comment">//2. 通过辅助函数获取</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">computed: &#123;</span><br><span class="line">	mapState(&#123;</span><br><span class="line">        <span class="comment">// 箭头函数可使代码更简练</span></span><br><span class="line">        count: <span class="function"><span class="params">state</span> =&gt;</span> state.count,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 传字符串参数 'count' 等同于 `state =&gt; state.count`</span></span><br><span class="line">        countAlias: <span class="string">'count'</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 为了能够使用 `this` 获取局部状态，必须使用常规函数</span></span><br><span class="line">        countPlusLocalState (state) &#123;</span><br><span class="line">          <span class="keyword">return</span> state.count + <span class="keyword">this</span>.localCount</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-getter"><a href="#2-2-getter" class="headerlink" title="2.2 getter"></a>2.2 getter</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getters 一般用于计算属性</span></span><br><span class="line"><span class="comment">// Getter 也可以接受其他 getter 作为第二个参数</span></span><br><span class="line">getters: &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  doneTodosCount: <span class="function">(<span class="params">state, getters</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> getters.doneTodos.length</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 返回一个方法，可传参数使用</span></span><br><span class="line">  getTodoById: <span class="function">(<span class="params">state</span>) =&gt;</span> <span class="function">(<span class="params">id</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.todos.find(<span class="function"><span class="params">todo</span> =&gt;</span> todo.id === id)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">import</span> &#123; mapGetters &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"><span class="comment">// 组件中获取数据的方式</span></span><br><span class="line"><span class="comment">// 1. 直接通过实例获取</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="keyword">this</span>.$store.getters.XXX;</span><br><span class="line"><span class="comment">//2. 通过辅助函数获取</span></span><br><span class="line">computed: &#123;</span><br><span class="line">    mapGetters(&#123;</span><br><span class="line">      <span class="comment">// 把 `this.doneCount` 映射为 `this.$store.getters.doneTodosCount`</span></span><br><span class="line">      doneCount: <span class="string">'doneTodosCount'</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-mutations"><a href="#2-3-mutations" class="headerlink" title="2.3 mutations"></a>2.3 mutations</h3><blockquote>
+<p> <strong>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。</strong></p>
+</blockquote>
+<ul>
+<li>使用 commit 提交 mutation， mutation改变值得方式只能是同步操作。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">mutations: &#123;</span><br><span class="line">    increment (state,value) &#123; </span><br><span class="line">      <span class="comment">// 变更状态</span></span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 出发 increment 的方式</span></span><br><span class="line"><span class="comment">// 1. 以载荷形式分发</span></span><br><span class="line">store.commit(<span class="string">'increment'</span>, &#123;</span><br><span class="line">  amount: <span class="number">10</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 2. 以对象形式分发</span></span><br><span class="line">store.commit(&#123;</span><br><span class="line">  type: <span class="string">'increment'</span>,</span><br><span class="line">  amount: <span class="number">10</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-actions"><a href="#2-4-actions" class="headerlink" title="2.4 actions"></a>2.4 actions</h3><blockquote>
+<p> 可以给组件使用的函数，以此用来驱动事件处理器 mutations，==异步操作==</p>
+</blockquote>
+<blockquote>
+<p>使用 dispatch 提交 actions， actions改变值得方式支持操作。可搭配 async/await 使用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    count: <span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    increment (context) &#123;  <span class="comment">//context 执行的上下文，作为第一个参数</span></span><br><span class="line">      context.commit(<span class="string">'increment'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，因此你可以调用 context.commit 提交一个 mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters。</span></span><br><span class="line"><span class="comment">//需要调用 commit 很多次的时候,可以简写成:</span></span><br><span class="line">actions: &#123;</span><br><span class="line">  increment (&#123; commit &#125;) &#123;</span><br><span class="line">    commit(<span class="string">'increment'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 可调用 actions 中的其他方法</span></span><br><span class="line">actions: &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  actionB (&#123; dispatch, commit &#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> dispatch(<span class="string">'actionA'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      commit(<span class="string">'someOtherMutation'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5-Module"><a href="#2-5-Module" class="headerlink" title="2.5 Module"></a>2.5 Module</h3><blockquote>
+<p>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。 </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可将数据分成 各个独立的模块，包含store的所有方法</span></span><br><span class="line"><span class="keyword">const</span> moduleA = &#123;</span><br><span class="line">  state: &#123; ... &#125;,</span><br><span class="line">  mutations: &#123; ... &#125;,</span><br><span class="line">  actions: &#123; ... &#125;,</span><br><span class="line">  getters: &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 对于模块内部的 action，局部状态通过 context.state 暴露出来，根节点状态则为 context.rootState</span></span><br><span class="line">actions: &#123;</span><br><span class="line">    incrementIfOddOnRootSum (&#123; state, commit, rootState &#125;) &#123;</span><br><span class="line">      <span class="keyword">if</span> ((state.count + rootState.count) % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">        commit(<span class="string">'increment'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-实际的应用案例"><a href="#2-6-实际的应用案例" class="headerlink" title="2.6  实际的应用案例"></a>2.6  实际的应用案例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> app <span class="keyword">from</span> <span class="string">'./config/app'</span></span><br><span class="line"><span class="keyword">import</span> config <span class="keyword">from</span> <span class="string">'./config/config'</span></span><br><span class="line"><span class="keyword">import</span> errorLog <span class="keyword">from</span> <span class="string">'./config/errorLog'</span></span><br><span class="line"><span class="keyword">import</span> tagsView <span class="keyword">from</span> <span class="string">'./config/tagsView'</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">'./config/user'</span></span><br><span class="line"><span class="keyword">import</span> permission <span class="keyword">from</span> <span class="string">'./config/permission'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> getters <span class="keyword">from</span> <span class="string">'./getters'</span></span><br><span class="line"><span class="keyword">import</span> mutations <span class="keyword">from</span> <span class="string">'./mutations'</span></span><br><span class="line"><span class="keyword">import</span> actions <span class="keyword">from</span> <span class="string">'./actions'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    modules: &#123;</span><br><span class="line">        app,</span><br><span class="line">        config,</span><br><span class="line">        errorLog,</span><br><span class="line">        tagsView,</span><br><span class="line">        user,</span><br><span class="line">        permission</span><br><span class="line">    &#125;,</span><br><span class="line">    state: &#123;</span><br><span class="line">        routes: []</span><br><span class="line">    &#125;,</span><br><span class="line">    getters,</span><br><span class="line">    mutations,</span><br><span class="line">    actions</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 响应式的更改某个state的值</span></span><br><span class="line"><span class="comment">// store.watch(</span></span><br><span class="line"><span class="comment">//      (state) =&gt; &#123;</span></span><br><span class="line"><span class="comment">//         return state.sessions</span></span><br><span class="line"><span class="comment">//     &#125;, </span></span><br><span class="line"><span class="comment">//     (val) =&gt; &#123;</span></span><br><span class="line"><span class="comment">//         console.log(12312315156)</span></span><br><span class="line"><span class="comment">//         // localStorage.setItem('vue-chat-session', JSON.stringify(val));</span></span><br><span class="line"><span class="comment">//     &#125;, &#123;</span></span><br><span class="line"><span class="comment">//     deep: true/*这个貌似是开启watch监测的判断,官方说明也比较模糊*/</span></span><br><span class="line"><span class="comment">// &#125;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-动态监听-localStorage-的变化"><a href="#3-动态监听-localStorage-的变化" class="headerlink" title="3 动态监听 localStorage 的变化"></a>3 动态监听 localStorage 的变化</h2><ul>
+<li>在 vuex state 的 使用了 localStorage 的值， 但改变了localStorage 值，需要页面刷新才能获取最新的值。</li>
+<li>原理： 在存储值的时候，添加一个监听事件，在获取值的组件 设置监听函数，已实现动态的变化。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/16/常用api/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/10/spring security认证流程/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jay Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常见vue问题"><span class="nav-number">1.</span> <span class="nav-text">常见vue问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-vue-router"><span class="nav-number">1.1.</span> <span class="nav-text">1. vue router</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-懒加载问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 懒加载问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-动态路由加载"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 动态路由加载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-vuex"><span class="nav-number">1.2.</span> <span class="nav-text">2. vuex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-state"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 state</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-getter"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 getter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-mutations"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 mutations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-actions"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-Module"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 Module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-实际的应用案例"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6  实际的应用案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-动态监听-localStorage-的变化"><span class="nav-number">1.3.</span> <span class="nav-text">3 动态监听 localStorage 的变化</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jay Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

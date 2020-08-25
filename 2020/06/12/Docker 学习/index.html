@@ -95,7 +95,7 @@
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200612153320768.png">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200629005842518.png">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200629003854743.png">
-<meta property="og:updated_time" content="2020-07-05T14:13:57.313Z">
+<meta property="og:updated_time" content="2020-08-16T17:18:54.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 学习">
 <meta name="twitter:description" content="Docker 学习1 安装 docker官方文档地址：https://docs.docker.com/  安装  Install on ubuntu 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849# 卸载旧版本$ sudo apt-get remove docker">
@@ -446,7 +446,7 @@
 <blockquote>
 <p>Docker 安装 redis</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装 redis</span><br><span class="line">docker pull redis:3.2</span><br><span class="line"><span class="meta">#</span> 运行 redis </span><br><span class="line">docker run -p 6379:6379 -d --name myredis -v /docker/redis/data:/data redis:3.2 redis-server --appendonly yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装 redis</span><br><span class="line">docker pull redis:3.2</span><br><span class="line"><span class="meta">#</span> 运行 redis </span><br><span class="line">docker run -p 6379:6379 -d --name myredis -v /usr/redis/redis.conf:/etc/redis/redis.conf -v /docker/redis/data:/data redis:3.2 redis-server /etc/redis/redis.conf --appendonly yes</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>安装 JDK 8</p>
@@ -677,7 +677,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -690,7 +690,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
